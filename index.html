@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="d-flex justify-content-between px-5 align-items-center">
+        <a href="#"><img src="assets/logo-transp.png" alt="" class="main-logo"></a>
+        <img src="assets/dog1.png" alt="" class="dog-logo">
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex align-items-center">
+                <a href="#"><img src="assets/paws.png" alt="" class="nav-img"></a>
+                <a href="#" class="navbar-button">Home</a>
+                <div class="dropdown-navbar">
+                    <button class="navbar-button button-hover">Productos</button>
+                    <div class="dropdown-content">
+                        <a href="./farmacia.html" class="navbar-button">Farmacia</a>
+                        <a href="./juguetes.html" class="navbar-button">Juguetes</a>
+                    </div>
+                </div>
+                <a href="./contacts.html" class="navbar-button">Contacto</a>
+            </div>
+            
+            <button class="btn-personalizado" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="assets/cart.svg" alt="" class="cart-img"></button>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" id="welcome">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <h1 class="title">BIENVENIDOS AMIGOS 🐶</h1>
+                <p>
+                    Somos Franco Petshop, el primer e-commerce especializado en productos para tu
+                    mascota.<br><br> Ofrecemos una experiencia diferente de compra, brindando
+                    productos de alta calidad que cumplen con las necesidades de las mascotas y la satisfacción de sus
+                    dueños.
+                    Reconocemos a las mascotas como un miembro más de la familia, a las que debemos cuidar,
+                    proteger, y brindar el mejor cuidado para que tengan una excelente calidad de vida.<br><br>
+                    Para ello ofrecemos la más amplia variedad en productos de entretenimiento, accesorios y farmacia.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/images/corgi.jpg" class="d-block w-100" alt="Corgi">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/cat.jpg" class="d-block w-100" alt="Gatito">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/viento.jpg" class="d-block w-100" alt="Perrito al Viento">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/images/puppies.jpg" class="d-block w-100" alt="Cachorritos">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" id="subtitle">
+            <div class="col">
+                <h2>PRODUCTOS DESTACADOS DEL MES!</h2>
+            </div>
+        </div>
+
+        <div class="row cards">
+            <div class="card col-sm-12 col-md-6 col-lg-2" style="width: 18rem;">
+                <img src="./assets/images/bola.png" class="card-img-top" alt="Bola para Agua">
+                <div class="card-body">
+                    <h5 class="card-title">Pelota de Agua</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">AGREGAR AL CARRITO 🛒</a>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 col-lg-2" style="width: 18rem;">
+                <img src="./assets/images/bravecto.png" class="card-img-top" alt="Bravecto">
+                <div class="card-body">
+                    <h5 class="card-title">Antipulgas Y Garrapatas </h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">AGREGAR AL CARRITO 🛒</a>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 col-lg-2" style="width: 18rem;">
+                <img src="./assets/images/frisbee.png" class="card-img-top" alt="Frisbee">
+                <div class="card-body">
+                    <h5 class="card-title">Frisbee de Silicona</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">AGREGAR AL CARRITO 🛒</a>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 col-lg-2" style="width: 18rem;">
+                <img src="./assets/images/huevo.png" class="card-img-top" alt="Huevo para Alimento">
+                <div class="card-body">
+                    <h5 class="card-title">Treat Ball</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">AGREGAR AL CARRITO 🛒</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="subtitle">
+            <div class="col">
+                <h2>QUE VAS A COMPRAR HOY?</h2>
+            </div>
+        </div>
+
+        <div class="row cards">
+            <div class="card col-sm-12 col-md-6 col-lg-6" style="width: 30rem;">
+                <img src="./assets/images/FARMACIA.png" class="card-img-top" alt="Perrito con Bata">
+                <div class="card-body">
+                    <h5 class="card-title">FARMACIA</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card col-sm-12 col-md-6 col-lg-6" style="width: 30rem;">
+                <img src="./assets/images/JUEGUETES.png" class="card-img-top" alt="Juguetes de Perro">
+                <div class="card-body">
+                    <h5 class="card-title">JUGUETES</h5>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="list-box">
+            <ul>
+                <li>Sobre nosotros</li>
+                <li>Contáctenos</li>
+                <li>Políticas de privacidad</li>
+                <li>Políticas de precio</li>
+            </ul>
+            <ul>
+                <li>Envío y devoluciones</li>
+                <li>Preguntas frequentes</li>
+                <li>Términos y condiciones</li>
+                <li>Política de devoluciones</li>
+            </ul>
+            <ul>
+                <li><img src="assets/facebook.svg" alt="facebook logo">Facebook</li>
+                <li><img src="assets/twitter.svg" alt="twitter logo">Twitter</li>
+                <li><img src="assets/instagram.svg" alt="instagram logo">Instagram</li>
+                <li><img src="assets/youtube.svg" alt="youtube logo">Youtube</li>
+            </ul>
+        </div>
+
+        <a href="#"><img src="assets/logo-white.png" alt="logo" class="footer-logo"></a>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6869258109527!2d-58.43257238491949!3d-34.612077380457386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1sen!2sar!4v1649945998538!5m2!1sen!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
