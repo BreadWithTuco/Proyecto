@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franco Petshop - Home</title>
+    <title>Franco Petshop - Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -86,7 +85,7 @@
         </div>
 
         <header class="d-flex justify-content-between px-5 align-items-center">
-            <a href="#"><img src="assets/logo-transp.png" alt="" class="main-logo"></a>
+            <a href="./index.html"><img src="assets/logo-transp.png" alt="logo" class="main-logo"></a>
             <img src="assets/dog2.png" alt="" class="dog-logo">
         </header>
 
@@ -100,24 +99,24 @@
                 <div class="d-lg-flex align-items-center collapse navbar-collapse navbar-collapsed"
                     id="navbarSupportedContent">
                     <a href="#"><img src="assets/paws.png" alt="" class="nav-img nav-item"></a>
-                    <a href="#" class="navbar-button nav-item">Home</a>
+                    <a href="./index.html" class="navbar-button nav-item">Home</a>
                     <a href="./farmacia.html" class="navbar-button nav-item">Farmacia</a>
                     <a href="./juguetes.html" class="navbar-button nav-item">Juguetes</a>
-                    <a href="./contacto.html" class="navbar-button nav-item">Contacto</a>
+                    <a href="#" class="navbar-button nav-item">Contacto</a>
                 </div>
 
                 <div class="dropdown-favoritos">
                     <button class="btn-personalizado" type="button"><img src="assets/favoritos.svg" alt="favoritos" class="favs-img"><span class="span-carrito">{{productosFavoritos.length}}</span></button>
                     <div class="dropdown-favoritos-content">
                         <div class="dropdown-cards" v-for="producto in productosFavoritos">
-                            <img v-bind:src="producto.imagen" :alt="producto.nombre">
+                            <img v-bind:src="producto.imagen" alt="...">
                             <span>{{producto.nombre}}</span>
                             <a class="btn btn-index" @click="llenandoCarrito(producto); removerDeFavoritos(producto);"><img src="./assets/cart.svg" alt="" class="index-cart"></a>
                         </div>
                     </div>
                 </div>
                 <button class="btn-personalizado" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <img src="assets/cart.svg" alt="" class="cart-img">
+                    <img src="assets/cart.svg" alt=""class="cart-img">
                     <span class="span-carrito">{{productosDelCarrito.length}}</span>
                 </button>
             </div>
@@ -202,193 +201,142 @@
             </div>
         </nav>
 
-        <div class="container">
-            <div class="row" id="welcome">
-                <div class="col-sm-12 col-md-12 col-lg-6 pe-5 d-flex flex-column align-items-center div-main-box" data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-in-sine">
-                    <h1 class="title mb-3 main-title">BIENVENIDOS AMIGOS 🐶</h1>
-                    <p class="wording">
-                        Somos <i>Franco Petshop</i>, el primer e-commerce especializado en productos para tu
-                        mascota.
-                    </p>
-                    <p class="wording">
-                        Ofrecemos una experiencia diferente de compra, brindando
-                        productos de alta calidad que cumplen con las necesidades de las mascotas y la satisfacción de
-                        sus
-                        dueños.
-                        Reconocemos a las mascotas como un miembro más de la familia, a las que debemos cuidar,
-                        proteger, y brindar el mejor cuidado para que tengan una excelente calidad de vida.
-                    </p>
-                    <p class="wording">
-                        Para ello ofrecemos la más amplia variedad en productos de entretenimiento, accesorios y
-                        farmacia.
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 pe-lg-4 p-5" data-aos="fade-up" data-aos-duration="1000">
-                    <div id="carouselExampleCaptions" class="carousel carousel-dark slide carousel-main"
-                        data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="./assets/images/corgi.jpg" class="d-block w-100" alt="Corgi">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/cat.jpg" class="d-block w-100" alt="Gatito">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/viento.jpg" class="d-block w-100" alt="Perrito al Viento">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/puppies.jpg" class="d-block w-100" alt="Cachorritos">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+        <main class="main-contactos">
+            <div class='signup-container'>
+                <div class='left-container'>
+                    <h1>
+                        <i class='fas fa-paw'><img src="assets/paw.svg" alt="paw" id="contact-icon"></i>
+                        FRANCO PETSHOP
+                    </h1>
+                    <div class='puppy' data-aos="fade-up" data-aos-delay="700">
+                        <img
+                            src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png'>
                     </div>
                 </div>
-            </div>
-
-            <div class="subtitle">
-                <div class="col">
-                    <h2>¡PRODUCTOS DESTACADOS DEL MES!</h2>
+                <div class="top-container">
+                    <i class='fas fa-paw'><img src="assets/paw.svg" alt="paw" id="top-contact-icon"></i>
+                    <h1>
+                        FRANCO PETSHOP
+                    </h1>
+                    <div class='puppy'>
+                        <img
+                            src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png'>
+                    </div>
                 </div>
-            </div>
-
-            <div class="row cards destacados">
-                <div class="index-card-main col-sm-12 col-md-6 col-lg-2 d-flex flex-column"
-                    v-for="producto in iterarProductosFavoritos" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                    <img :src="producto.imagen" class="card-img-top h-50" :alt="producto.nombre"
-                        v-on:click="cartelDeIndex(producto.imagen)">
-                    <div class="card-body d-flex flex-column justify-content-between h-50">
-                        <div>
-                            <h5 class="card-title">{{producto.nombre}}</h5>
-                            <p class="card-text card-parrafo">{{producto.descripcion}}</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <input type="checkbox" :id="producto._id" name="favoritos" value="favorite-button"
-                                class="input-favourite">
-
-                                <label :for="producto._id" class="label-favourite">
-                                    <div class="action">
-                                        <span class="option-1 align-self-center"
-                                            @click="agregarFavoritos(producto)"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-heart">
-                                                <path
-                                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                </path>
-                                            </svg> Agregar a Favoritos</span>
-
-                                        <span class="option-2 align-self-center"
-                                            @click="removerDeFavoritos(producto)"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-heart">
-                                                <path
-                                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                                </path>
-                                            </svg> Agregado a Favoritos</span>
+                <div class='right-container' data-aos="fade-left" data-aos-delay="400" data-aos-duration="1200">
+                    <form @submit.prevent>
+                        <div class="contact-header">
+                            <h1>¿Tenés consultas? ¡Envianos informacion sobre tu mascota!</h1>
+                            <div class='set'>
+                                <div class='pets-name' data-aos="zoom-in" data-aos-delay="500">
+                                    <label for='pets-name'>Nombre</label>
+                                    <input id='pets-name' placeholder="Nombre de mascota" type='text'>
+                                </div>
+                                <div class='pets-name'data-aos="zoom-in" data-aos-delay="600">
+                                    <label for='pets-name'>Tipo</label>
+                                    <input id='pets-name' placeholder="Tipo de mascota" type='text'>
+                                </div>
+                            </div>
+                            <div class='set'>
+                                <div class='pets-breed' data-aos="zoom-in" data-aos-delay="700">
+                                    <label for='pets-breed'>Raza</label>
+                                    <input id='pets-breed' placeholder="Raza de mascota" type='text'>
+                                </div>
+                                <div class='pets-birthday' data-aos="zoom-in" data-aos-delay="800">
+                                    <label for='pets-birthday'>Cumpleaños</label>
+                                    <input id='pets-birthday' placeholder='DD/MM/YYYY' type='text'>
+                                </div>
+                            </div>
+                            <div class='set'>
+                                <div class='pets-gender' data-aos="zoom-in" data-aos-delay="900">
+                                    <label for='pet-gender-female'>Genero</label>
+                                    <div class='radio-container'>
+                                        <input checked='' id='pet-gender-female' name='pet-gender' type='radio'
+                                            value='female'>
+                                        <label for='pet-gender-female'>Hembra</label>
+                                        <input id='pet-gender-male' name='pet-gender' type='radio' value='male'>
+                                        <label for='pet-gender-male'>Macho</label>
                                     </div>
-                                </label>
-
-                            <a v-if="producto.tipo == 'Medicamento'" href="./farmacia.html" class="btn btn-index"
-                                @click="llenandoCarrito(producto)"><img src="./assets/cart.svg" alt=""
-                                    class="index-cart"></a>
-                            <a v-else="" href="./juguetes.html" class="btn btn-index"
-                                @click="llenandoCarrito(producto)"><img src="./assets/cart.svg" alt=""
-                                    class="index-cart"></a>
+                                </div>
+                                <div class='pets-spayed-neutered' data-aos="zoom-in" data-aos-delay="1000">
+                                    <label for='pet-spayed'>¿Está castrado?</label>
+                                    <div class='radio-container'>
+                                        <input checked='' id='pet-spayed' name='spayed-neutered' type='radio'
+                                            value='spayed'>
+                                        <label for='pet-spayed'>Si</label>
+                                        <input id='pet-neutered' name='spayed-neutered' type='radio' value='neutered'>
+                                        <label for='pet-neutered'>No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='pets-weight' data-aos="zoom-in" data-aos-delay="1100">
+                                <label for='pet-weight-0-25'>Peso</label>
+                                <div class='radio-container'>
+                                    <input checked='' id='pet-weight-0-25' name='pet-weight' type='radio' value='0-25'>
+                                    <label for='pet-weight-0-25'>0-10 kgs</label>
+                                    <input id='pet-weight-25-50' name='pet-weight' type='radio' value='25-50'>
+                                    <label for='pet-weight-25-50'>10-15 kgs</label>
+                                    <input id='pet-weight-50-100' name='pet-weight' type='radio' value='50-100'>
+                                    <label for='pet-weight-50-100'>15-20 kgs</label>
+                                    <input id='pet-weight-100-plus' name='pet-weight' type='radio' value='100+'>
+                                    <label for='pet-weight-100-plus'>20+ kgs</label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="contact-footer">
+                            <div class='set'>
+                                <button id='back' type="reset">Limpiar formulario</button>
+                                <button id='next' v-on:click="cartelDeGracias" type="submit">Siguiente</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </main>
 
-            <div class="subtitle">
-                <div class="col">
-                    <h2>¿QUE VAS A COMPRAR HOY?</h2>
-                </div>
-            </div>
-
-            <div class="row cards farm-jug">
-                <div class="card col-sm-12 col-md-6 col-lg-6 expand" data-aos="fade-right">
-                    <a href="./farmacia.html"><img src="./assets/images/FARMACIA.png" class="card-img-top"
-                            alt="Perrito con Bata"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">FARMACIA</h5>
-                    </div>
-                </div>
-                <div class="card col-sm-12 col-md-6 col-lg-6 expand" data-aos="fade-left">
-                    <a href="./juguetes.html"> <img src="./assets/images/JUEGUETES.png" class="card-img-top"
-                            alt="Juguetes de Perro"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">JUGUETES</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="list-box">
-            <ul>
-                <li data-aos="flip-left" data-aos-delay="50" data-aos-duration="1000"><a href="#">Sobre nosotros</a></li>
-                <li data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000"><a href="./contacto.html">Contáctenos</a></li>
-                <li data-aos="flip-left" data-aos-delay="150" data-aos-duration="1000">Políticas de privacidad</li>
-                <li data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">Políticas de precio</li>
-            </ul>
-            <ul>
-                <li data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000">Envío y devoluciones</li>
-                <li data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">Preguntas frequentes</li>
-                <li data-aos="flip-left" data-aos-delay="350" data-aos-duration="1000">Términos y condiciones</li>
-                <li data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000">Política de devoluciones</li>
-            </ul>
-            <ul>
-                <li data-aos="flip-left" data-aos-delay="450" data-aos-duration="1000"><img src="assets/facebook.svg" alt="facebook logo"><a href="https://www.facebook.com/people/Franco-Petshop/100080353067385/">Facebook</a></li>
+        <footer>
+            <div class="list-box">
+                <ul>
+                    <li data-aos="flip-left" data-aos-delay="50" data-aos-duration="1000"><a href="./index.html">Sobre nosotros</a></li>
+                    <li data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000"><a href="#">Contáctenos</a></li>
+                    <li data-aos="flip-left" data-aos-delay="150" data-aos-duration="1000">Políticas de privacidad</li>
+                    <li data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">Políticas de precio</li>
+                </ul>
+                <ul>
+                    <li data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000">Envío y devoluciones</li>
+                    <li data-aos="flip-left" data-aos-delay="300" data-aos-duration="1000">Preguntas frequentes</li>
+                    <li data-aos="flip-left" data-aos-delay="350" data-aos-duration="1000">Términos y condiciones</li>
+                    <li data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000">Política de devoluciones</li>
+                </ul>
+                <ul>
+                    <li data-aos="flip-left" data-aos-delay="450" data-aos-duration="1000"><img src="assets/facebook.svg" alt="facebook logo"><a href="https://www.facebook.com/people/Franco-Petshop/100080353067385/">Facebook</a></li>
                     <li data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000"><img src="assets/twitter.svg" alt="twitter logo"><a href="https://twitter.com/FrancoPetshop">Twitter</a></li>
                     <li data-aos="flip-left" data-aos-delay="550" data-aos-duration="1000"><img src="assets/instagram.svg" alt="instagram logo"><a href="https://www.instagram.com/francopetshop27/">Instagram</a></li>
                     <li data-aos="flip-left" data-aos-delay="600" data-aos-duration="1000"><img src="assets/youtube.svg" alt="youtube logo"><a href="https://www.youtube.com/channel/UCNbW2MJunOR2CjJCM5iEyzg">Youtube</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-horarios" data-aos="flip-left" data-aos-delay="600">
-            <a href="#"><img src="assets/logo-white.png" alt="logo" class="footer-logo"></a>
-            <div>
-                <span class="info-span">Horarios de atención: </span>
-                <span class="info-span">Lunes a Viernes de 9 a 18</span>
-                <span class="info-span">Sabados de 9 a 13</span>
+                </ul>
             </div>
-        </div>
+    
+            <div class="footer-horarios">
+                <a href="#"><img src="assets/logo-white.png" alt="logo" class="footer-logo"></a>
+                <div>
+                    <span class="info-span">Horarios de atención: </span>
+                    <span class="info-span">Lunes a Viernes de 9 a 18</span>
+                    <span class="info-span">Sabados de 9 a 13</span>
+                </div>
+            </div>
+    
+            <iframe data-aos="fade-up"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6869258109527!2d-58.43257238491949!3d-34.612077380457386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1sen!2sar!4v1649945998538!5m2!1sen!2sar"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="banner">
+                <span>&#169 Marvel Team | All rights reserved - <i>Flor azul, espinas rojas</i></span>
+            </div>
+        </footer>
+    </div>
 
-        <iframe data-aos="fade-up"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6869258109527!2d-58.43257238491949!3d-34.612077380457386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1sen!2sar!4v1649945998538!5m2!1sen!2sar"
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <div class="banner">
-            <span>&#169 Marvel Team | All rights reserved - <i>Flor azul, espinas rojas</i></span>
-        </div>
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
